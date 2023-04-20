@@ -3,8 +3,7 @@ import re
 import requests
 from flask import jsonify
 
-from app import HTTP_400_BAD_REQUEST
-from app.helpers.http_status_code import HTTP_200_OK
+from app.helpers.http_status_code import HTTP_200_OK, HTTP_400_BAD_REQUEST
 from config import Config
 
 

@@ -1,4 +1,5 @@
 import os
+from dataclasses import dataclass
 
 from dotenv import load_dotenv
 
@@ -13,16 +14,17 @@ def db_uri_replace():
     return uri
 
 
+@dataclass
 class Config:
     SQLALCHEMY_DATABASE_URI = db_uri_replace()
     API_KEY = os.environ.get('API_KEY')
     URL = os.environ.get('URL')
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    TOKEN_API_V4_AUTH = os.environ.get('TOKEN_API_V4_AUTH')
     ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-    # MAIL_SERVER = os.environ.get('MAIL_SERVER')
-    # MAIL_PORT = os.environ.get('MAIL_PORT')
-    # MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS')
-    # MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    # MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
+@dataclass
+class ElasticSearchConfig:
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    ELASTICSEARCH_INDEX: str = 'logs_api'

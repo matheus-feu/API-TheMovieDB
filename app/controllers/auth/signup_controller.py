@@ -1,5 +1,4 @@
 from flask import jsonify, request
-from flask_restx import Resource
 from werkzeug.security import generate_password_hash
 
 from app.db.session import get_db_session

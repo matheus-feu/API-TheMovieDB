@@ -1,8 +1,9 @@
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 
+from app.helpers.elasticsearch_logger import ElasticsearchLogger
 from app.helpers.http_status_code import HTTP_404_NOT_FOUND, HTTP_500_INTERNAL_SERVER_ERROR, HTTP_400_BAD_REQUEST
-from config import Config
+from config import Config, ElasticSearchConfig
 
 
 def create_app():
@@ -37,7 +38,14 @@ def create_app():
     from app.views.movies.upcoming_view import upcoming_bp
     app.register_blueprint(upcoming_bp, url_prefix='/api/v1/movies', tags=['movies'])
 
-    @app.errorhandler(HTTP_404_NOT_FOUND)
+    from app.views.movies.recommendations_view import recommendations_bp
+    app.register_blueprint(recommendations_bp, url_prefix='/api/v1/movies', tags=['movies'])
+
+    from app.helpers.elasticsearch_ingestion_datas import elastic_search_test
+    app.register_blueprint(elastic_search_test, url_prefix='/api/v1/elastic', tags=['elasticsearch'])
+
+    @ app.errorhandler(HTTP_404_NOT_FOUND)
+
     def error_not_found(error):
         """Verifica se as rotas """
         return jsonify({'error': 'Not found'}), HTTP_404_NOT_FOUND

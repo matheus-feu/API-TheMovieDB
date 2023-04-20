@@ -1,6 +1,7 @@
 version: '3.7'
 
 services:
+
   postgres:
     image: postgres:12.2
     container_name: postgresdb
@@ -10,4 +11,24 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - 5432:5432
+      - "5432:5432"
+
+  elastic:
+    image: elasticsearch:8.6.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: kibana:8.6.2
+    container_name: kibana
+    restart: unless-stopped
+    environment:
+      ELASTICSEARCH_URL: ${ELASTICSEARCH_URL}
+    depends_on:
+      - elastic
+    ports:
+      - "5601:5601"
