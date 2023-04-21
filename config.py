@@ -23,8 +23,3 @@ class Config:
     TOKEN_API_V4_AUTH = os.environ.get('TOKEN_API_V4_AUTH')
     ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-
-@dataclass
-class ElasticSearchConfig:
-    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
-    ELASTICSEARCH_INDEX: str = 'logs_api'
