@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f05f2b76-6bee-4d48-ac88-26d42f59f095" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/movies/recommendations_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/decorators/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/decorators/time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/elasticsearch_logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/movies/recommendations_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/alguma-API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/alguma-API.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c533e3ac-6245-4e32-b1f7-de0ffe17df4c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c533e3ac-6245-4e32-b1f7-de0ffe17df4c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/auth/signup_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/auth/signup_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/movies/upcoming_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/movies/upcoming_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/upcoming_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/upcoming_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/movies/recommendations_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/movies/recommendations_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/elasticsearch_logger.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
@@ -92,7 +80,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -275,7 +263,14 @@
       <workItem from="1681918870717" duration="15000" />
       <workItem from="1681918998541" duration="15138000" />
       <workItem from="1681942255393" duration="3515000" />
-      <workItem from="1681953011291" duration="94000" />
+      <workItem from="1681953011291" duration="122000" />
+      <workItem from="1681953154971" duration="72000" />
+      <workItem from="1681953251973" duration="58000" />
+      <workItem from="1681954700933" duration="32000" />
+      <workItem from="1681959343620" duration="91000" />
+      <workItem from="1681994293325" duration="10509000" />
+      <workItem from="1682008206621" duration="377000" />
+      <workItem from="1682020162299" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1681775495180</created>
@@ -284,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681775495180</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1681953124381</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681953124381</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +305,7 @@
     <SUITE FILE_PATH="coverage/alguma_API$elasticsearch_ingestion_datas.coverage" NAME="elasticsearch_ingestion_datas Coverage Results" MODIFIED="1681943902182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/helpers" />
     <SUITE FILE_PATH="coverage/alguma_API$connect_elasticsearch.coverage" NAME="connect_elasticsearch Coverage Results" MODIFIED="1681924228181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/helpers" />
     <SUITE FILE_PATH="coverage/alguma_API$teste_connect_es.coverage" NAME="teste_connect_es Coverage Results" MODIFIED="1681928128035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/helpers" />
-    <SUITE FILE_PATH="coverage/alguma_API$run.coverage" NAME="run Coverage Results" MODIFIED="1681952799193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/alguma_API$run.coverage" NAME="run Coverage Results" MODIFIED="1682001114951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alguma_API$main.coverage" NAME="main Coverage Results" MODIFIED="1681243370003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/alguma_API$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1681226652527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

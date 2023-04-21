@@ -1,8 +1,6 @@
 import requests
 from flask import jsonify
 
-from app import es_logger
-from app.decorators.time import countTime
 from app.helpers.http_status_code import HTTP_200_OK, HTTP_400_BAD_REQUEST
 from config import Config
 
@@ -11,10 +9,6 @@ def get_recommendations_controller(movie_id):
     """Controller que irá pegar a lista de filmes recomendados"""
 
     recommendations = []
-
-    headers = {
-        'TimeCount': countTime
-    }
 
     if not movie_id:
         return jsonify({'error': 'Missing parameters'}), HTTP_400_BAD_REQUEST
@@ -30,5 +24,7 @@ def get_recommendations_controller(movie_id):
         }
         recommendations.append(recommendations_data)
 
+    if not recommendations:
+        return jsonify({'error': 'No recommendations found'}), HTTP_400_BAD_REQUEST
 
-    return jsonify({'headers': headers, 'results': recommendations}), HTTP_200_OK
+    return jsonify({'results': recommendations}), HTTP_200_OK
