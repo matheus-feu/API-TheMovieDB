@@ -1,13 +1,11 @@
 from flask import Blueprint, request
 
 from app.controllers.movies.recommendations_controller import get_recommendations_controller
-from app.decorators.time import countTime
 
 recommendations_bp = Blueprint('recommendations', __name__)
 
 
 @recommendations_bp.route('/recommendations', methods=['GET'])
-@countTime
 def get_recommendations_view():
     """Endpoint que irá pegar a lista de filmes recomendados"""
 
